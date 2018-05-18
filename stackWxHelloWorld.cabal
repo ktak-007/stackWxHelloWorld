@@ -1,0 +1,77 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 33370f33cdace29a767c66ca7ef469370ccb89e35348780a2d4e398f698136e2
+
+name:           stackWxHelloWorld
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/ktak-007/stackWxHelloWorld#readme>
+homepage:       https://github.com/ktak-007/stackWxHelloWorld#readme
+bug-reports:    https://github.com/ktak-007/stackWxHelloWorld/issues
+author:         Stanislav Smirnov
+maintainer:     ktak_007@mail.ru
+copyright:      2018 Stanislav Smirnov
+license:        GPLv3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+data-files:
+    res/images/open.png
+    res/images/open32.png
+
+source-repository head
+  type: git
+  location: https://github.com/ktak-007/stackWxHelloWorld
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base
+    , wx
+    , wxc
+    , wxcore
+    , wxdirect
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_stackWxHelloWorld
+  default-language: Haskell2010
+
+executable stackWxHelloWorld
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base
+    , stackWxHelloWorld
+    , wx
+    , wxc
+    , wxcore
+    , wxdirect
+  other-modules:
+      Paths_stackWxHelloWorld
+  default-language: Haskell2010
+
+test-suite stackWxHelloWorld-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base
+    , stackWxHelloWorld
+    , wx
+    , wxc
+    , wxcore
+    , wxdirect
+  other-modules:
+      Paths_stackWxHelloWorld
+  default-language: Haskell2010
